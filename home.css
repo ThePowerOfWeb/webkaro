@@ -1,0 +1,478 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url(aset/people.jpg);
+  height: 100%;
+  font-family: Raleway;
+}
+
+.navbar-001{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.logo-karo-001{
+  font-size: 1rem;
+  font-weight: 800;
+  color: white;
+}
+
+.input-001 {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    background-color: #275965;
+    justify-content: center;
+    border-radius: 50px;
+    gap: 10.5px;
+  }
+
+.input-001 a{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    background-color: #275965;
+    justify-content: center;
+    border-radius: 50px;
+    gap: 10.5px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .value-001 {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    color: white;
+    display: flex;
+    position: relative;
+    gap: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  .value-001:not(:active):hover,
+  .value-001:focus {
+    background-color: #0d4351;
+  }
+  
+  .value-001:focus,
+  .value-001:active {
+    background-color: #0d4351;
+    outline: none;
+  }
+  
+  .value-001::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    width: 100%;
+    height: 3px;
+    background-color: #2f81f7;
+    border-radius: 50px;
+    opacity: 0;
+  }
+  
+  .value-001:focus::before,
+  .value-001:active::before {
+    opacity: 1;
+  }
+  
+  .value-001 svg {
+    width: 15px;
+  }
+
+  .profile-001{
+    border-radius: 2rem;
+    padding: -1px;
+  }
+
+  .header {
+    margin-top: 17rem;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 2em;
+
+  }
+
+  .home-isi-001{
+    margin-top: 15rem;
+    background-color: #0F272D;
+    border-radius: 10rem 10rem 0 0;
+    height: 168rem;
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  /*  */
+
+  .home-daleman-001{
+    display: flex;
+    margin: 10% 10% 10% 10%;
+    gap: 1rem;
+  }
+
+  .home-daleman-002{
+    gap: 1rem;
+    color: white;
+  }
+
+  .home-daleman-002 h1{
+    margin-bottom: 20px;
+  }
+
+  .home-daleman-002 h5{
+    margin-top: 25px;
+  }
+
+  .home-daleman-images{
+    margin-left: 10rem;
+  }
+
+/*  */
+
+  .home-daleman-003{
+    display: flex;
+    margin: 10% 10% 10% 10%;
+  }
+
+  .home-daleman-images-1{
+    margin-left: 4rem;
+  }
+
+/*  */
+
+.footer-home-isi-002{
+    margin-top: -10rem;
+    background-color: #275965;
+    border-radius: 5rem 5rem 0 0;
+    height: 30rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+  /*  */
+
+.footer-home-daleman-005{
+  gap: 5rem;
+  display: flex;
+  margin: 10% 10% 10% 10%;
+}
+
+  .footer-home-daleman-006{
+    width: 15rem;
+    text-decoration: none;
+    color: white;
+  }
+
+  .footer-home-daleman-006 a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .footer-home-daleman-006 h2{
+    text-decoration: none;
+    color: white;
+    margin-left: 22%;
+    font-size: 32px;
+  }
+
+  /*  */
+
+  .input-group-daleman-007 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-group-daleman-007 .input {
+    min-height: 50px;
+    max-width: 170px;
+    padding: 0 1rem;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid #0F272D;
+    border-radius: 10px 0 0 10px;
+    background-color: #0F272D;
+  }
+  
+  .input-group-daleman-007 .button--submit {
+    height: 36px;
+    padding: .5em 1em;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    background-color: #468796;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+  }
+  
+  .input-group-daleman-007 .button--submit:hover {
+    background-color: #5e5dcd;
+  }
+  
+  .input-group-daleman-007 .input:focus, .input-group-daleman-007 .input:focus-visible {
+    background-color: #153a43;
+    outline: none;
+  }
+  
+/* Search Overlay Styles */
+#search-overlay {
+  position: absolute; /* Position relative to the nearest positioned ancestor or the document */
+  top: 80px; /* Adjust this value based on your navbar height */
+  left: 0;
+  width: 100%;
+  display: flex; /* Use flexbox to center content */
+  justify-content: center; /* Center horizontally */
+  padding: 20px 0;
+  background-color: #0f272d; /* Example background color, adjust as needed */
+  z-index: 100; /* Ensure it appears above other content */
+}
+
+.search-container {
+  width: 80%; /* Adjust width as needed */
+  max-width: 600px; /* Max width for larger screens */
+  background-color: #275965; /* Example background color for the container */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional: add a shadow */
+}
+
+#search-input {
+  width: 70%; /* Reduced width */
+  padding: 1px 10px; /* Reduced vertical padding */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+#search-results {
+  margin-top: 20px; /* Space between input and results */
+  color: white; /* Example text color for results */
+}
+
+/*  */
+
+  .profile-001{
+    border-radius: 2rem;
+    padding: -1px;
+  }
+  
+  .search-input-container {
+    position: relative; /* Needed for absolute positioning of the icon and dropdown */
+    display: flex;
+    align-items: center;
+    background-color: white; /* Background color of the search input area */
+    border-radius: 20px; /* Rounded corners */
+    padding: 5px 15px; /* Adjust padding as needed */
+  }
+
+  #nav-search-input {
+    border: none; /* Remove default input border */
+    outline: none; /* Remove outline on focus */
+    padding: 5px 0; /* Adjust padding */
+    font-size: 1rem;
+    background: none; /* Transparent background */
+    width: 150px; /* Adjust width as needed */
+  }
+
+  .search-icon-inside {
+    margin-left: 5px; /* Space between input text and icon */
+    stroke: #333; /* Icon color, adjust as needed */
+    width: 18px; /* Icon size */
+    height: 18px; /* Icon size */
+  }
+
+  .search-results-dropdown {
+    position: absolute;
+    top: 100%; /* Position below the input container */
+    left: 0;
+    right: 0;
+    background-color: #275965; /* Background for the dropdown */
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 50; /* Below the overlay, but above content */
+    max-height: 200px; /* Limit height and add scroll */
+    overflow-y: auto;
+    color: white;
+    padding: 10px;
+  }
+
+  .search-results-dropdown div {
+    padding: 8px 0;
+    cursor: pointer;
+  }
+
+  .search-results-dropdown div:hover {
+    background-color: #0f272d; /* Hover effect */
+  }
+  
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar-001 {
+    flex-direction: column; /* Stack navbar items vertically on small screens */
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .input-001 {
+    flex-direction: column; /* Stack navigation buttons vertically */
+    width: 100%;
+    border-radius: 0;
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .input-001 a {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .value-001 {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .search-input-container {
+    width: 90%; /* Adjust width for smaller screens */
+    margin: 10px auto; /* Center the search container */
+  }
+
+  #nav-search-input {
+    width: 80%; /* Adjust input width */
+  }
+
+  .profile-001 {
+    margin-top: 10px;
+  }
+
+  .header {
+    margin-top: 10rem; /* Adjust header margin */
+    font-size: 1.5em;
+  }
+
+  .home-isi-001 {
+    margin-top: 5rem; /* Adjust margin */
+    border-radius: 5rem 5rem 0 0;
+    height: auto; /* Remove fixed height */
+    padding: 1rem 0.5rem; /* Adjust padding */
+  }
+
+  .home-daleman-001,
+  .home-daleman-003 {
+    flex-direction: column; /* Stack content blocks vertically */
+    margin: 5% auto; /* Center blocks and adjust margin */
+    width: 90%; /* Adjust width */
+    gap: 2rem; /* Adjust gap */
+  }
+
+  .home-daleman-002 {
+    width: 100%; /* Make sure content within blocks takes full width */
+    text-align: center; /* Center align text */
+  }
+
+  .home-daleman-images,
+  .home-daleman-images-1 {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 0; /* Remove fixed margin */
+    display: block; /* Ensure image is a block element for centering */
+    margin: 0 auto; /* Center images */
+  }
+
+  .footer-home-isi-002 {
+    margin-top: 2rem; /* Adjust footer margin */
+    border-radius: 2rem 2rem 0 0;
+    height: auto; /* Remove fixed height */
+    padding: 1rem 0.5rem; /* Adjust padding */
+  }
+
+  .footer-home-daleman-005 {
+    flex-direction: column; /* Stack footer columns */
+    margin: 5% auto; /* Center footer content */
+    gap: 2rem;
+    width: 90%; /* Adjust width */
+  }
+
+  .footer-home-daleman-006 {
+    width: 100%; /* Make footer columns take full width */
+    text-align: center; /* Center align text */
+  }
+
+  .footer-home-daleman-006 h2 {
+    margin-left: 0; /* Remove fixed margin */
+  }
+
+  .input-group-daleman-007 {
+    justify-content: center; /* Center newsletter input */
+  }
+
+  .input-group-daleman-007 .input {
+    max-width: 100%; /* Adjust input width */
+    text-align: center;
+  }
+}
+
+/* Add styles for the new buttons */
+.home-buttons-container {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  margin-top: 20px; /* Add some space above the buttons */
+  gap: 20px; /* Add space between the buttons */
+}
+
+.button-karo {
+  padding: 10px 20px;
+  border-radius: 25px; /* Rounded corners */
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-karo a {
+    text-decoration: none;
+    color: white;
+}
+
+.button-karo {
+  background-color: #ff6600; /* Orange background for 'Apa itu karo' */
+  color: white;
+}
+
+.button-karo-secondary {
+  background-color: #275965; /* Dark teal background for 'Info terkini' */
+  color: white;
+}
+
+.button-karo:hover {
+  opacity: 0.9; /* Slight opacity change on hover */
+}
+
+/* Responsive adjustments for buttons */
+@media (max-width: 768px) {
+  .home-buttons-container {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+    align-items: center; /* Center stacked buttons */
+    gap: 10px; /* Adjust gap for stacked buttons */
+  }
+
+  .button-karo {
+    width: 80%; /* Make buttons wider on small screens */
+    text-align: center;
+  }
+}
+  
+  

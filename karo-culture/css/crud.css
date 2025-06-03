@@ -1,0 +1,121 @@
+.profile-container {
+  max-width: 400px;
+  margin: 60px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.profile-container h2 {
+  margin-bottom: 24px;
+  color: #275965;
+}
+
+.profile-field {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.profile-field label {
+  display: block;
+  margin-bottom: 6px;
+  color: #275965;
+  font-weight: 600;
+}
+
+.profile-field input,
+.profile-field textarea { /* Add textarea for content */
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #bcd0d3;
+  border-radius: 6px;
+  font-size: 1em;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.profile-field input:focus,
+.profile-field textarea:focus { /* Add textarea for focus */
+  border: 1.5px solid #275965;
+}
+
+.save-btn {
+  background: #275965;
+  color: #fff;
+  border: none;
+  padding: 10px 32px;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.save-btn:hover {
+  background: #183b43;
+}
+
+.cancel-btn {
+  background: #ff6600; /* Orange background */
+  color: #fff; /* White text */
+  border: 1px solid #29b6f6; /* Light blue border */
+  padding: 10px 32px;
+  border-radius: 25px; /* Rounded corners */
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-right: 10px; /* Space between Batal and Simpan */
+}
+
+.cancel-btn:hover {
+  opacity: 0.9; /* Slight opacity change on hover */
+}
+
+.profile-container form button {
+  /* Make buttons inline-block to appear side-by-side */
+  display: inline-block;
+}
+
+body {
+  background: #eaf3f6;
+  font-family: Raleway, Arial, sans-serif;
+}
+
+.profile-nav {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 32px 0 18px 0;
+}
+
+.profile-nav a {
+  background: #275965;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.profile-nav a:hover {
+  background: #183b43;
+}
+
+.account-btn {
+  background: #275965;
+  color: #fff;
+  padding: 7px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.account-btn:hover {
+  background: #183b43;
+} 
+

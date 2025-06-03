@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="budayatradisional.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KaroCulture</title>
+</head>
+<body>
+  <div class="navbar-001">
+    <div class="logo-karo-001">
+        <p>KaroCulture</p>
+    </div>
+    <div class="input-001">
+      <button class="value-001">
+        <a href="home.html">Home</a>
+      </button>
+      <button class="value-001">
+       <a href="tempat.html">Tempat</a>
+      </button>
+      <button class="value-001">
+        <a href="kulinermkn.html">Kuliner</a>
+      </button>
+      <button class="value-001">
+        <a href="sejarah.html">Sejarah</a>
+      </button>
+      <button class="value-001">
+        <a href="budayatradisional.html">Budaya</a>
+      </button>
+      <button class="value-001">
+        <a href="kuis.html">Kuis</a>
+      </button>
+    </div>
+    <div class="profile-001">
+      <a href="karo-culture/profile.html">
+        <img src="aset/profile.png" width="40px" height="40px" alt="">
+      </a>
+    </div>
+</div>
+
+    <!--  -->
+    <div class="header">
+        <button type="button" name="tradisi" class="tradisi">
+          <a href="tradisibudaya.html">Tradisi</a>
+        </button>
+        <button type="button" name="gambar" class="gambar">
+          <a href="gambarbudaya.html">Gambar</a>
+        </button>
+        <button type="button" name="busana" class="busana">
+          <a href="busanabudaya.html">Busana</a>
+        </button>
+        <button type="button" name="bangunan" class="bangunan">
+          <a href="bangunanbudaya.html">Bangunan</a>
+        </button>
+        <button type="button" name="musik" class="musik">
+          <a href="musikbudaya.html">Musik</a>
+        </button>
+    </div>
+    
+<!--  -->
+    
+
+
+<!--  -->
+
+    <div class="home-daleman-003">
+        <div class="home-daleman-004">
+        <img src="aset/halaman budaya.png" alt="">
+        </div>
+    </div>
+
+    <!--  -->
+
+    <div class="footer-home-isi-002">
+      <div class="footer-home-daleman-005">
+        <div class="footer-home-daleman-006">
+          <h1>KaroCulture</h1>
+          <p>Karo adalah salah satu adat budaya yang berada di Indonesia</p>   
+        </div>
+        <div class="footer-home-daleman-006">
+          <h1>Quick Links</h1>
+          <a href="#">About Us</a>  <br> <br>
+          <a href="#">Service</a>   <br> <br>
+          <a href="#">Pricing</a>   <br> <br>
+          <a href="#">Blog</a>   
+        </div>
+        <div class="footer-home-daleman-006">
+          <h1>KaroCulture</h1>
+          <img src="aset/email.png" alt="">
+          <a href="#">karoculture@gmail.com</a>  <br> <br>
+          <img src="aset/location.png" alt="">
+          <a href="#">Provinsi Sumatera Utara, Indonesia. Ibu kota kabupaten ini terletak di Kecamatan Kabanjahe.</a>   <br> <br>
+          <a href="#">Created by: Ipan Ramadan, Ricardo Valentino Simanjunak, Muhammad Ridwan Maulana, Afif addiba Saragih, Raafi Rasyid Averoes, and Ivander Nathan Dananjaya</a>   <br> <br>
+          <!-- <img src="aset/call phone.png" alt="">
+          <a href="#">+02 5421234560</a> -->
+        </div>
+        <div class="footer-home-daleman-006">
+          <h2>Newsletter</h2>
+          <div class="input-group-daleman-007">
+            <input type="email" class="input" id="Email" name="Email" placeholder="Enter your E-mail" autocomplete="off">
+            <img  class="button--submit" src="aset/send email.png" alt="">
+        </div>
+        <p id="newsletter-notification" style="color: rgb(255, 255, 255); margin-top: 10px; display: none;">Berhasil terkirim!</p>
+        </div>
+      </div>        
+    </div>
+
+    <!--  -->
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sendButton = document.querySelector('.input-group-daleman-007 .button--submit');
+    const notificationElement = document.getElementById('newsletter-notification');
+    const emailInput = document.getElementById('Email');
+
+    sendButton.addEventListener('click', function() {
+      // Optional: Check if input is not empty before showing notification
+      if (emailInput.value.trim() !== '') {
+        notificationElement.style.display = 'block';
+        emailInput.value = ''; // Clear the input field
+
+        // Optional: Hide the notification after a few seconds
+        setTimeout(function() {
+          notificationElement.style.display = 'none';
+        }, 5000); // Hide after 5 seconds
+      } else {
+        // Optional: Show a message if input is empty
+        // alert('Please enter your email address.');
+      }
+    });
+  });
+</script>
+</html>

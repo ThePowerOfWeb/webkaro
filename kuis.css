@@ -1,0 +1,178 @@
+body {
+    background: #eaf3f6;
+    font-family: Raleway, Arial, sans-serif;
+    margin: 0;
+  }
+  .kuis-navbar {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    background: #275965;
+    padding: 18px 0;
+    border-radius: 0 0 18px 18px;
+    margin-bottom: 32px;
+  }
+  .kuis-navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 6px;
+    transition: background 0.2s;
+  }
+  .kuis-navbar a.active, .kuis-navbar a:hover {
+    background: #183b43;
+  }
+  .kuis-container {
+    max-width: 480px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 24px;
+    text-align: center;
+  }
+  #kuis-title {
+    color: #275965;
+    margin-bottom: 18px;
+  }
+  .kuis-soal {
+    font-size: 1.2em;
+    margin-bottom: 18px;
+    color: #183b43;
+  }
+  .kuis-pilihan {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .kuis-pilihan button {
+    background: #275965;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .kuis-pilihan button:hover {
+    background: #183b43;
+  }
+  .kuis-timer {
+    font-size: 1em;
+    color: #e74c3c;
+    margin-bottom: 12px;
+  }
+  .kuis-next-btn {
+    background: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 10px 32px;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background 0.2s;
+  }
+  .kuis-next-btn:hover {
+    background: #27ae60;
+  }
+  #kuis-scoreboard {
+    margin-top: 24px;
+  }
+  #kuis-animasi {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .kuis-container, .kuis-navbar {
+    position: relative;
+    z-index: 1;
+  }
+  #kuis-history {
+    background: #f7fafc;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 18px 12px;
+    margin-top: 32px;
+    text-align: left;
+    color: #275965;
+    font-size: 1em;
+  }
+  .kuis-history-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  .kuis-history-list {
+    list-style: decimal;
+    margin-left: 18px;
+    margin-bottom: 0;
+  }
+  .kuis-history-list li {
+    margin-bottom: 2px;
+  }
+  .kuis-leaf, .kuis-bubble {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.7;
+    z-index: 0;
+  }
+  
+/* Responsive Adjustments for Kuis */
+@media (max-width: 768px) {
+  .kuis-navbar {
+    flex-direction: column; /* Stack navbar items vertically */
+    gap: 10px; /* Adjust gap */
+    padding: 10px 0; /* Adjust padding */
+  }
+
+  .kuis-navbar a {
+    padding: 8px 15px; /* Adjust padding */
+  }
+
+  .kuis-container {
+    margin: 20px auto; /* Adjust margin */
+    max-width: 95%; /* Allow container to take more width */
+    padding: 20px 15px; /* Adjust padding */
+  }
+
+  .kuis-soal {
+    font-size: 1em; /* Adjust font size */
+    margin-bottom: 15px; /* Adjust margin */
+  }
+
+  .kuis-pilihan button {
+    padding: 8px 0; /* Adjust padding */
+    font-size: 0.9em; /* Adjust font size */
+  }
+
+  .kuis-timer {
+    font-size: 0.9em; /* Adjust font size */
+    margin-bottom: 10px; /* Adjust margin */
+  }
+
+  .kuis-next-btn {
+    padding: 8px 20px; /* Adjust padding */
+    font-size: 0.9em; /* Adjust font size */
+  }
+
+  #kuis-scoreboard {
+    margin-top: 15px; /* Adjust margin */
+    font-size: 0.9em; /* Adjust font size */
+  }
+
+  #kuis-history {
+    margin-top: 20px; /* Adjust margin */
+    padding: 15px 10px; /* Adjust padding */
+    font-size: 0.9em; /* Adjust font size */
+  }
+
+  .kuis-history-list {
+    margin-left: 15px; /* Adjust margin */
+  }
+}
+  

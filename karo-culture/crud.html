@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Informasi Karo</title>
+    <link rel="stylesheet" href="css/crud.css">
+</head>
+<body>
+    <div class="profile-nav">
+      <a href="../home.html">Home</a>
+      <a href="../tempat.html">Tempat</a>
+      <a href="../kulinermkn.html">Kuliner</a>
+      <a href="../sejarah.html">Sejarah</a>
+      <a href="../budayatradisional.html">Budaya</a>
+      <a href="../kuis.html">Kuis</a>
+    </div>
+    <div class="profile-container">
+        <h2>Edit Informasi Karo</h2>
+        <div style="text-align:right;margin-bottom:12px;">
+          <a href="../index.html" class="account-btn">Account</a>
+        </div>
+        <form id="crudForm">
+            <div class="profile-field">
+                <label for="pageSelect">Halaman</label>
+                <select id="pageSelect" name="page" required>
+                    <option value="tempat">Tempat</option>
+                    <option value="kulinermkn">Kuliner Makanan</option>
+                    <option value="kulinermnm">Kuliner Minuman</option>
+                    <option value="sejarah">Sejarah</option>
+                    <option value="budaya">TradisiBudaya</option>
+                    <option value="budaya">GambarBudaya</option>
+                    <option value="budaya">BusanaBudaya</option>
+                    <option value="budaya">BangunanBudaya</option>
+                    <option value="budaya">MusikBudaya</option>
+                    <!-- Add other relevant pages as options -->
+                </select>
+            </div>
+            <div class="profile-field">
+                <label for="infoTitle">Judul</label>
+                <input type="text" id="infoTitle" name="title" required>
+            </div>
+            <div class="profile-field">
+                <label for="infoDescription">Deskripsi</label>
+                <textarea id="infoDescription" name="description" rows="5" required></textarea>
+            </div>
+            <div class="profile-field">
+                <label for="infoImage">Gambar</label>
+                <input type="file" id="infoImage" name="image" accept="image/*">
+            </div>
+            <!-- Add more fields as needed for different data types -->
+
+            <button type="button" class="cancel-btn">Batal</button>
+            <button type="submit" class="save-btn">Simpan perubahan</button>
+        </form>
+        <!-- Maybe add a list/table of existing info to edit/delete later -->
+    </div>
+    <script>
+      // Basic script for CRUD page
+      // Add functionality for Batal button (clear form)
+      document.querySelector('.cancel-btn').addEventListener('click', function() {
+        document.getElementById('crudForm').reset();
+      });
+
+      // Add functionality for Simpan button (will need backend logic later)
+      document.getElementById('crudForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Collect data from form fields
+        const page = document.getElementById('pageSelect').value;
+        const title = document.getElementById('infoTitle').value;
+        const description = document.getElementById('infoDescription').value;
+        const imageFile = document.getElementById('infoImage').files[0];
+        
+        const infoData = {
+            title: title,
+            description: description,
+            image: null // Placeholder for image data (will handle separately)
+        };
+
+        // Handle image file: Read as Data URL for localStorage (Limited use case)
+        if (imageFile) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                infoData.image = e.target.result; // Store image as Data URL
+                saveAndDisplayData(page, infoData);
+            };
+            reader.readAsDataURL(imageFile); // Read file as data URL
+        } else {
+            saveAndDisplayData(page, infoData);
+        }
+
+        function saveAndDisplayData(page, data) {
+             // Get existing data for this page from localStorage or initialize an empty array
+            const existingData = JSON.parse(localStorage.getItem(page) || '[]');
+
+            // Add new data (for simplicity, just add - in a real app, you might update/delete)
+            existingData.push(data);
+
+            // Save updated data back to localStorage
+            localStorage.setItem(page, JSON.stringify(existingData));
+
+            console.log(`Data for ${page} saved to localStorage:`, existingData);
+            alert(`Informasi untuk ${page} berhasil disimpan secara lokal di browser Anda!`);
+
+            // Optional: Clear the form after saving
+            document.getElementById('crudForm').reset();
+        }
+      });
+
+    </script>
+</body>
+</html> 

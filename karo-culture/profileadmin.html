@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profile</title>
+    <link rel="stylesheet" href="css/profileadmin.css">
+</head>
+<body>
+    <div class="profile-nav">
+      <a href="../home.html">Home</a>
+      <a href="../tempat.html">Tempat</a>
+      <a href="../kulinermkn.html">Kuliner</a>
+      <a href="../sejarah.html">Sejarah</a>
+      <a href="../budayatradisional.html">Budaya</a>
+      <a href="../kuis.html">Kuis</a>
+    </div>
+    <div class="profile-container">
+        <h2>Admin Profile</h2>
+        <div style="text-align:right;margin-bottom:12px;">
+          <a href="../index.html" class="account-btn">Account</a>
+        </div>
+        <form id="adminProfileForm">
+            <div class="profile-image-section">
+                <img id="profileImage" src="../aset/profile.png" alt="Profile Image">
+                <!-- Admin profile might not have an image upload or it might be different -->
+                 <input type="file" id="imageUpload" accept="image/*">
+            </div>
+            <div class="profile-field">
+                <label for="fullName">Nama Lengkap</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="profile-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="profile-field">
+                <label for="hobby">Asal</label>
+                <input type="text" id="hobby" name="hobby">
+            </div>
+            <div class="profile-field">
+                <label for="adminCode">kode admin</label>
+                <input type="text" id="adminCode" name="adminCode" required>
+            </div>
+            <button type="button" class="cancel-btn">Batal</button>
+            <button type="submit" class="save-btn">Simpan</button>
+        </form>
+        <!-- Button to go back to user profile -->
+        <button id="userLoginBtn">Masuk sebagai user</button>
+    </div>
+    <script>
+      // Basic script for the admin profile page
+      // Load admin profile data if needed
+      window.onload = function() {
+        const adminProfile = JSON.parse(localStorage.getItem('adminProfileData'));
+        if (adminProfile) {
+          document.getElementById('fullName').value = adminProfile.fullName || '';
+          document.getElementById('email').value = adminProfile.email || '';
+          document.getElementById('hobby').value = adminProfile.hobby || '';
+          document.getElementById('adminCode').value = adminProfile.adminCode || '';
+          if (adminProfile.image) {
+            document.getElementById('profileImage').src = adminProfile.image;
+          }
+        }
+      };
+
+      // Image preview (already exists, keep it)
+      document.getElementById('imageUpload').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function(evt) {
+            document.getElementById('profileImage').src = evt.target.result;
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      // Add functionality for Batal button
+      document.querySelector('.cancel-btn').addEventListener('click', function() {
+        document.getElementById('adminProfileForm').reset();
+        // Optionally reset image if there's an admin profile image
+        document.getElementById('profileImage').src = '../aset/profile.png'; // Reset image to default admin image
+      });
+
+      // Add functionality for Masuk sebagai user button
+      document.getElementById('userLoginBtn').addEventListener('click', function() {
+        window.location.href = 'profile.html'; // Redirect to user profile page
+      });
+
+      // Save admin profile
+      document.getElementById('adminProfileForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const adminProfileData = {
+          fullName: document.getElementById('fullName').value,
+          email: document.getElementById('email').value,
+          hobby: document.getElementById('hobby').value,
+          adminCode: document.getElementById('adminCode').value,
+          image: document.getElementById('profileImage').src // Get the image Data URL
+        };
+        localStorage.setItem('adminProfileData', JSON.stringify(adminProfileData));
+        alert('Admin Profile berhasil disimpan!');
+      });
+
+      // Add functionality for EDIT INFORMASI KARO button
+      document.querySelector('.edit-info-karo-btn').addEventListener('click', function() {
+        window.location.href = 'crud.html'; // Redirect to CRUD page
+      });
+    </script>
+    <!-- Add EDIT INFORMASI KARO button -->
+    <button class="edit-info-karo-btn"><a href="crud.html">EDIT INFORMASI KARO</a></button>
+</body>
+</html> 

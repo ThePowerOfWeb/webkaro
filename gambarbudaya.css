@@ -1,0 +1,541 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: rgb(15, 39, 45);
+    height: 100%;
+    font-family: Raleway;
+  }
+  
+  .navbar-001{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 2rem;
+  }
+  
+  .logo-karo-001{
+    font-size: 1rem;
+    font-weight: 800;
+    color: white;
+  }
+  
+  .input-001 {
+      display: flex;
+      flex-direction: row;
+      width: fit-content;
+      background-color: #275965;
+      justify-content: center;
+      border-radius: 50px;
+      gap: 10.5px;
+    }
+
+    .input-001 a{
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        background-color: #275965;
+        justify-content: center;
+        border-radius: 50px;
+        gap: 10.5px;
+        color: white;
+        text-decoration: none;
+      }
+    
+    .value-001 {
+      background-color: transparent;
+      border: none;
+      padding: 10px;
+      color: white;
+      display: flex;
+      position: relative;
+      gap: 5px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+    
+    .value-001:not(:active):hover,
+    .value-001:focus {
+      background-color: #0d4351;
+    }
+    
+    .value-001:focus,
+    .value-001:active {
+      background-color: #0d4351;
+      outline: none;
+    }
+    
+    .value-001::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      right: 0px;
+      width: 100%;
+      height: 3px;
+      background-color: #2f81f7;
+      border-radius: 50px;
+      opacity: 0;
+    }
+    
+    .value-001:focus::before,
+    .value-001:active::before {
+      opacity: 1;
+    }
+    
+    .value-001 svg {
+      width: 15px;
+    }
+  
+    .profile-001{
+      border-radius: 2rem;
+      padding: -1px;
+    }
+  
+    .header {
+      margin-top: 5rem;
+      color: white;
+      font-weight: 700;
+      font-size: 2em;
+      margin-left: 11.5%;
+    }
+
+    .tradisi{
+        width: 123px;
+        height: 49px;
+        background-color: #0F272D;
+        color: white;
+        outline: 2px solid #275965;
+        }
+    
+        .tradisi a{
+        color: white;
+        text-decoration: none;
+        }
+        
+        .gambar{
+        width: 123px;
+        height: 49px;
+        background-color: #275965;
+        color: white;
+        outline: 2px solid #275965;
+        }
+        
+        .gambar a{
+          color: white;
+          text-decoration: none;
+        }
+        
+        .busana{
+        width: 123px;
+        height: 49px;
+        background-color: #0F272D;
+        color: white;
+        outline: 2px solid #275965;
+        }
+    
+        .busana a{
+          color: white;
+          text-decoration: none;
+        }
+        
+        .bangunan{
+        width: 123px;
+        height: 49px;
+        background-color: #0F272D;
+        color: white;
+        outline: 2px solid #275965;
+        }
+    
+        .bangunan a{
+        color: white;
+        text-decoration: none;
+        }
+        
+        .musik{
+        width: 123px;
+        height: 49px;
+        background-color: #0F272D;
+        color: white;
+        outline: 2px solid #275965;
+        }
+    
+        .musik a{
+          color: white;
+          text-decoration: none;
+        }
+        
+
+    /*  */
+
+.tradisional-of-culture{
+  display: flex;
+  margin: 10% 10% 10% 10%;
+  gap: 12%;
+  justify-content: center;
+  
+}
+    
+    .isi-budaya-tradisonal-1{
+        display: flex;
+      }
+      
+      /* From Uiverse.io by imPradhyumn */ 
+      .isi-budaya-tradisonal-1 .card {
+    width: 294px;
+    height: 294px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    position: relative;
+    background-image: url(aset/Tari\ Lima\ Serangkai.png);
+    
+  }
+
+    .isi-budaya-tradisonal-2{
+        display: flex;
+      }
+      
+      /* From Uiverse.io by imPradhyumn */ 
+      .isi-budaya-tradisonal-2 .card {
+    width: 294px;
+    height: 294px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    position: relative;
+    background-image: url(aset/Tari\ Piso\ Surit.png);
+    
+  }
+  
+    .isi-budaya-tradisonal-3{
+        display: flex;
+      }
+      
+      /* From Uiverse.io by imPradhyumn */ 
+      .isi-budaya-tradisonal-3 .card {
+    width: 294px;
+    height: 294px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    position: relative;
+    background-image: url(aset/Tari\ Baka.png);
+    
+  }
+
+  /*  */
+
+    .isi-budaya-tradisonal-4{
+        display: flex;
+      }
+      
+      /* From Uiverse.io by imPradhyumn */ 
+      .isi-budaya-tradisonal-4 .card {
+    width: 294px;
+    height: 294px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    position: relative;
+    background-image: url(aset/Tari\ Gundala\ Gundala.png);
+    
+  }
+
+    .isi-budaya-tradisonal-5{
+        display: flex;
+      }
+      
+      /* From Uiverse.io by imPradhyumn */ 
+      .isi-budaya-tradisonal-5 .card {
+    width: 294px;
+    height: 294px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    position: relative;
+    background-image: url(aset/Tari\ Landek.png);
+    
+  }
+  
+    .isi-budaya-tradisonal-6{
+        display: flex;
+      }
+      
+      /* From Uiverse.io by imPradhyumn */ 
+      .isi-budaya-tradisonal-6 .card {
+    width: 294px;
+    height: 294px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    position: relative;
+    background-image: url(aset/Tari\ Ndikkar.png);
+    
+  }
+
+
+  
+  .remove-when-use {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    color: black;
+    top: 85px;
+    font-weight: bold;
+  }
+  
+  .details > p {
+    font-size: 1.5em;
+  }
+
+  .details > h6 {
+    font-size: .8em;
+    font-weight: 400;
+  }
+
+  .details > p i{
+    font-size: .5em;
+  }
+  
+  .details > label {
+    font-weight: bold;
+  }
+  
+  .details {
+    color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    width: 94%;
+    background-color: #275965;
+    position: absolute;
+    bottom: 0;
+    height: 3.9em;
+    transition: height .5s ease-in-out;
+    padding: 0.6em;
+    overflow: hidden;
+  }
+  
+  .card:hover > .details {
+    height: 12em;
+  }
+  
+  
+.load-more{
+  justify-content: center;
+  display: flex;
+  width: 123px;
+  height: 49px;
+  text-align: center;
+  margin-left: 45%;
+  background-color: #0F272D;
+  color: white;
+  outline: 2px solid #275965;
+}
+.load-more a{
+  margin-top: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+
+      
+    /*  */
+    
+
+    .footer-home-isi-002{
+        margin-top: -10rem;
+        background-color: #275965;
+        border-radius: 5rem 5rem 0 0;
+        height: 30rem;
+        width: 100%;
+        padding: 1rem;
+    }
+    
+      /*  */
+    
+    .footer-home-daleman-005{
+      gap: 5rem;
+      display: flex;
+      margin: 10% 10% 10% 10%;
+    }
+    
+      .footer-home-daleman-006{
+        width: 15rem;
+        text-decoration: none;
+        color: white;
+      }
+    
+      .footer-home-daleman-006 a{
+        text-decoration: none;
+        color: white;
+      }
+      
+      .footer-home-daleman-006 h2{
+        text-decoration: none;
+        color: white;
+        margin-left: 22%;
+        font-size: 32px;
+      }
+    
+      /*  */
+    
+      .input-group-daleman-007 {
+        display: flex;
+        align-items: center;
+      }
+      
+      .input-group-daleman-007 .input {
+        min-height: 50px;
+        max-width: 170px;
+        padding: 0 1rem;
+        color: #fff;
+        font-size: 15px;
+        border: 1px solid #0F272D;
+        border-radius: 10px 0 0 10px;
+        background-color: #0F272D;
+      }
+      
+      .input-group-daleman-007 .button--submit {
+        height: 36px;
+        padding: .5em 1em;
+        border: none;
+        border-radius: 0 10px 10px 0;
+        background-color: #468796;
+        color: #fff;
+        font-size: 15px;
+        cursor: pointer;
+        transition: background-color .3s ease-in-out;
+      }
+      
+      .input-group-daleman-007 .button--submit:hover {
+        background-color: #5e5dcd;
+      }
+      
+      .input-group-daleman-007 .input:focus, .input-group-daleman-007 .input:focus-visible {
+        background-color: #153a43;
+        outline: none;
+      }
+      
+      
+    
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar-001 {
+    flex-direction: column; /* Stack navbar items vertically on small screens */
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .input-001 {
+    flex-direction: column; /* Stack navigation buttons vertically */
+    width: 100%;
+    border-radius: 0;
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .input-001 a {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .value-001 {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .profile-001 {
+    margin-top: 10px;
+  }
+
+  .header {
+    margin-top: 3rem; /* Adjust header margin */
+    font-size: 1.5em;
+    margin-left: 0; /* Remove fixed margin */
+    text-align: center; /* Center align header */
+  }
+
+  .tradisi, .gambar, .busana, .bangunan, .musik {
+      width: 90%; /* Adjust button width */
+      margin: 5px auto; /* Center buttons */
+      text-align: center;
+      display: block;
+  }
+
+  .tradisional-of-culture {
+    flex-direction: column; /* Stack content blocks vertically */
+    margin: 5% auto; /* Center blocks and adjust margin */
+    width: 90%; /* Adjust width */
+    gap: 2rem; /* Adjust gap */
+    align-items: center; /* Center items in the column layout */
+  }
+
+  .isi-budaya-tradisonal-1,
+  .isi-budaya-tradisonal-2,
+  .isi-budaya-tradisonal-3,
+  .isi-budaya-tradisonal-4,
+  .isi-budaya-tradisonal-5,
+  .isi-budaya-tradisonal-6 {
+      width: 100%; /* Make sure content within blocks takes full width */
+      justify-content: center; /* Center card within the flex item */
+  }
+
+  .card {
+      width: 90%; /* Adjust card width for smaller screens */
+      max-width: 300px; /* Optional: set a max-width */
+      margin: 0 auto; /* Center the card */
+  }
+
+  .details {
+      width: 90%; /* Adjust details width */
+      padding: 0.5em;
+  }
+
+  .details > label {
+      font-size: 1.5em; /* Adjust font size */
+  }
+
+  .details > p {
+      font-size: 0.7em; /* Adjust font size */
+  }
+
+   .details > h6 {
+      font-size: 0.7em; /* Adjust font size */
+   }
+
+  .footer-home-isi-002 {
+    margin-top: 2rem; /* Adjust footer margin */
+    border-radius: 2rem 2rem 0 0;
+    height: auto; /* Remove fixed height */
+    padding: 1rem 0.5rem; /* Adjust padding */
+  }
+
+  .footer-home-daleman-005 {
+    flex-direction: column; /* Stack footer columns */
+    margin: 5% auto; /* Center footer content */
+    gap: 2rem;
+    width: 90%; /* Adjust width */
+  }
+
+  .footer-home-daleman-006 {
+    width: 100%; /* Make footer columns take full width */
+    text-align: center; /* Center align text */
+  }
+
+  .footer-home-daleman-006 h2 {
+    margin-left: 0; /* Remove fixed margin */
+  }
+
+  .input-group-daleman-007 {
+    justify-content: center; /* Center newsletter input */
+  }
+
+  .input-group-daleman-007 .input {
+    max-width: 100%; /* Adjust input width */
+    text-align: center;
+  }
+
+    /*  */
+    
+    .load-more{
+      justify-content: center;
+      margin: 10% auto;
+      width: 90%;
+    }
+}
+    

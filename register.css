@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100h;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: Raleway;
+    scroll-behavior: s;
+    background-image: url(aset/mentahan.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* navbar */
+.logo{
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.logo a{
+    color: white;
+}
+nav{
+    font-size: 20px;
+    width: 65%;
+    top: 2%;
+    left: 5%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+nav li{
+    height: 120px;
+}
+nav a{
+    height: 100%;
+    padding: 0 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgb(135, 118, 86);
+    
+}
+nav a:hover{
+    box-shadow: 0 0 10px rgba(134, 134, 134, 0.404);
+    border-radius: 5rem;
+    transform: scale(0.8);
+    transition-duration: 0.3s;
+    transition-property: box-shadow, transform;
+}
+
+@media (max-width: 922px) {
+    nav .links,
+    nav .action_btn {
+        display: none;
+    }
+
+    nav .toggle_btn {
+        display: block;
+    }
+}
+
+/* Responsive Adjustments for Register */
+@media (max-width: 768px) {
+    nav {
+        width: 90%; /* Adjust width */
+        top: 1%; /* Adjust top position */
+        left: 5%; /* Adjust left position */
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: center;
+        position: static; /* Remove fixed positioning */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack list items vertically */
+        align-items: center;
+        width: 100%;
+    }
+
+    nav li {
+        height: auto; /* Allow height to adjust */
+        margin: 5px 0; /* Add vertical margin */
+    }
+
+    nav a {
+        padding: 10px 0; /* Adjust padding */
+        width: 100%; /* Make links take full width */
+        justify-content: center; /* Center link text */
+    }
+
+    section#detail1 {
+        margin-top: 100px; /* Adjust top margin */
+        text-align: center; /* Center align text */
+        align-items: center; /* Center flex items */
+    }
+
+    section#detail1 h1,
+    section#detail1 h2 {
+        margin-right: 0; /* Remove fixed right margin */
+        text-align: center; /* Center align text */
+        width: 90%; /* Adjust width */
+        margin-left: auto; /* Center block elements */
+        margin-right: auto; /* Center block elements */
+    }
+
+    .wrapper {
+        width: 90%; /* Adjust width */
+        padding: 20px; /* Adjust padding */
+        margin: 20px auto; /* Center the wrapper */
+    }
+
+    .wrapper .input-box {
+        height: auto; /* Allow height to adjust */
+        margin-bottom: 15px; /* Add space between input boxes */
+    }
+
+    .input-box#username input,
+    .input-box#gmail input,
+    .input-box#password input {
+        width: 95%; /* Adjust input width */
+        padding: 10px; /* Adjust padding */
+        box-sizing: border-box; /* Include padding in width */
+    }
+
+    .input-box input::placeholder {
+        padding-left: 5px; /* Adjust placeholder padding */
+    }
+
+    .wrapper .btn {
+        width: 95%; /* Adjust button width */
+        padding: 10px; /* Adjust padding */
+        font-size: 1em; /* Adjust font size */
+    }
+}
+
+/*homepage */
+section#detail1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: flex-start;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: bold;
+}
+h1{
+    margin-top: 200px;
+    margin-right: 775px;
+}
+h2{
+    margin-right: 545px;
+    font-size: 20px;
+}
+.p1 a{
+    font-size: 20px;
+    color: rgb(214, 173, 96);
+    text-decoration: none;
+}
+
+/* form */
+.wrapper{
+    width: 400px;
+    color: white;
+    padding: 45px 120px;
+    font-family: Raleway;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 70px;
+
+}
+
+.input-box#username input{
+    border-radius: 10px;
+    height: 45px;
+    border: none;
+    outline: none;
+    background-color: rgba(94, 117, 110, 100);
+}
+
+.input-box#gmail input{
+    width: 86.5%;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: rgba(94, 117, 110, 100);
+}
+
+.input-box#password input{
+    width: 86.5%;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: rgba(94, 117, 110, 100);
+    
+}
+
+.input-box input::placeholder {
+    font-size: 12px;
+    color: #aaa; /* Warna placeholder */
+    padding-left: 10px;
+    padding-bottom: 50px;
+}
+
+.wrapper .btn {
+    width: 86.5%;
+    height: 45px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: rgba(214, 173, 96, 100);
+    font-family: Raleway;
+    font-weight: 666;
+}

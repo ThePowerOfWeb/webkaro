@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <div class="profile-nav">
+      <a href="../home.html">Home</a>
+      <a href="../tempat.html">Tempat</a>
+      <a href="../kulinermkn.html">Kuliner</a>
+      <a href="../sejarah.html">Sejarah</a>
+      <a href="../budayatradisional.html">Budaya</a>
+      <a href="../kuis.html">Kuis</a>
+    </div>
+    <div class="profile-container">
+        <h2>Profile</h2>
+        <div style="text-align:right;margin-bottom:12px;">
+          <a href="../index.html" class="account-btn">Account</a>
+        </div>
+        <form id="profileForm">
+            <div class="profile-image-section">
+                <img id="profileImage" src="../aset/profile.png" alt="Profile Image">
+                <input type="file" id="imageUpload" accept="image/*">
+            </div>
+            <div class="profile-field">
+                <label for="fullName">Nama Lengkap</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="profile-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="profile-field">
+                <label for="hobby">Asal</label>
+                <input type="text" id="hobby" name="hobby">
+            </div>
+            <button type="button" class="cancel-btn">Batal</button>
+            <button type="submit" class="save-btn">Simpan</button>
+        </form>
+        <!-- Add Masuk sebagai admin button -->
+        <button id="adminLoginBtn">Masuk sebagai admin</button>
+    </div>
+    <script>
+      // Load profile from localStorage
+      window.onload = function() {
+        const profile = JSON.parse(localStorage.getItem('profileData'));
+        if (profile) {
+          document.getElementById('fullName').value = profile.fullName || '';
+          document.getElementById('email').value = profile.email || '';
+          document.getElementById('hobby').value = profile.hobby || '';
+          if (profile.image) {
+            document.getElementById('profileImage').src = profile.image;
+          }
+        }
+      };
+      // Image preview
+      document.getElementById('imageUpload').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function(evt) {
+            document.getElementById('profileImage').src = evt.target.result;
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+      // Save profile
+      document.getElementById('profileForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const profileData = {
+          fullName: document.getElementById('fullName').value,
+          email: document.getElementById('email').value,
+          hobby: document.getElementById('hobby').value,
+          image: document.getElementById('profileImage').src
+        };
+        localStorage.setItem('profileData', JSON.stringify(profileData));
+        alert('Profile berhasil disimpan!');
+      });
+
+      // Add functionality for Batal button
+      document.querySelector('.cancel-btn').addEventListener('click', function() {
+        document.getElementById('profileForm').reset();
+        document.getElementById('profileImage').src = '../aset/profile.png'; // Reset image to default
+      });
+
+      // Add functionality for Masuk sebagai admin button
+      document.getElementById('adminLoginBtn').addEventListener('click', function() {
+        const accessCode = prompt('Masukkan kode akses admin:');
+        if (accessCode === '19.203.11' || accessCode === '19.783.99') {
+          window.location.href = 'profileadmin.html'; // Redirect to admin profile page
+        } else if (accessCode !== null) { // Check if the user didn't cancel the prompt
+          alert('Kode akses salah!');
+        }
+      });
+    </script>
+</body>
+</html>

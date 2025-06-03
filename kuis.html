@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuis Budaya Karo</title>
+  <link rel="stylesheet" href="kuis.css">
+</head>
+<body>
+  <div id="kuis-animasi"></div>
+  <div class="kuis-navbar">
+    <a href="home.html">Home</a>
+    <a href="tempat.html">Tempat</a>
+    <a href="kulinermkn.html">Kuliner</a>
+    <a href="sejarah.html">Sejarah</a>
+    <a href="budayatradisional.html">Budaya</a>
+    <a href="kuis.html" class="active">Kuis</a>
+  </div>
+  <div class="kuis-container">
+    <h2 id="kuis-title">Kuis Budaya Karo</h2>
+    <div id="kuis-nama-user" style="display:none;margin-bottom:18px;"></div>
+    <div id="kuis-content">
+      <button id="start-btn">Mulai Kuis</button>
+    </div>
+    <div id="kuis-scoreboard" style="display:none;">
+      <h3> score Tertinggi: <span id="highscore">0</span></h3>
+      <button onclick="location.reload()">Coba Lagi</button>
+    </div>
+    <div id="kuis-history" style="margin-top:32px;"></div>
+  </div>
+  <script src="kuis.js"></script>
+</body>
+</html>
