@@ -1,16 +1,17 @@
 .profile-container {
   max-width: 400px;
   margin: 60px auto;
-  background: #fff;
+  background: #275965;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   padding: 32px 24px;
   text-align: center;
+  color: #fff;
 }
 
 .profile-container h2 {
   margin-bottom: 24px;
-  color: #275965;
+  color: #fff;
 }
 
 .profile-field {
@@ -21,28 +22,32 @@
 .profile-field label {
   display: block;
   margin-bottom: 6px;
-  color: #275965;
+  color: #fff;
   font-weight: 600;
 }
 
 .profile-field input,
-.profile-field textarea { /* Add textarea for content */
-  width: 100%;
+.profile-field textarea,
+.profile-field select { /* Added select */
+  width: 300px; /* Adjusted width */
   padding: 8px 12px;
   border: 1px solid #bcd0d3;
   border-radius: 6px;
   font-size: 1em;
   outline: none;
   transition: border 0.2s;
+  background-color: #0F272D;
+  color: #fff;
 }
 
 .profile-field input:focus,
-.profile-field textarea:focus { /* Add textarea for focus */
-  border: 1.5px solid #275965;
+.profile-field textarea:focus,
+.profile-field select:focus { /* Added select for focus */
+  border: 1.5px solid #42b8d0;
 }
 
 .save-btn {
-  background: #275965;
+  background: #42b8d0;
   color: #fff;
   border: none;
   padding: 10px 32px;
@@ -57,28 +62,27 @@
 }
 
 .cancel-btn {
-  background: #ff6600; /* Orange background */
-  color: #fff; /* White text */
-  border: 1px solid #29b6f6; /* Light blue border */
+  background: #42b8d0;
+  color: #fff;
+  border: none; /* Removed border */
   padding: 10px 32px;
-  border-radius: 25px; /* Rounded corners */
+  border-radius: 25px;
   font-size: 1em;
   cursor: pointer;
   transition: background 0.2s;
-  margin-right: 10px; /* Space between Batal and Simpan */
+  margin-right: 10px;
 }
 
 .cancel-btn:hover {
-  opacity: 0.9; /* Slight opacity change on hover */
+  background: #183b43;
 }
 
 .profile-container form button {
-  /* Make buttons inline-block to appear side-by-side */
   display: inline-block;
 }
 
 body {
-  background: #eaf3f6;
+  background: #0F272D;
   font-family: Raleway, Arial, sans-serif;
 }
 
@@ -100,7 +104,7 @@ body {
 }
 
 .profile-nav a:hover {
-  background: #183b43;
+  background: #42b8d0;
 }
 
 .account-btn {
@@ -116,6 +120,6 @@ body {
 }
 
 .account-btn:hover {
-  background: #183b43;
+  background: #42b8d0;
 } 
 

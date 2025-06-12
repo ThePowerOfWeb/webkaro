@@ -18,6 +18,12 @@
     font-size: 1rem;
     font-weight: 800;
     color: white;
+    background-color: #275965;
+    border-radius: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .input-001 {
